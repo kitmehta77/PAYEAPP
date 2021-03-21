@@ -13,7 +13,7 @@ def hello_world():
 def netIncome():
     cross_income = request.get_json()
     print(cross_income)
-    return cross_income
+    return cross_income.gross_income
     #return jsonify(PAYE.totalTax())
 
 if __name__ == '__main__':
