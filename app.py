@@ -12,6 +12,7 @@ def hello_world():
 @app.route('/getNetIncome/', methods=['POST'])
 def netIncome():
     cross_income = request.get_json()
+    print(cross_income)
     return cross_income
     #return jsonify(PAYE.totalTax())
 
