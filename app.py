@@ -9,11 +9,12 @@ CORS(app)
 def hello_world():
     return 'Hello World!'
 
-@app.route('/getNetIncome/', methods=['POST'])
+@app.route('/getNetIncome/', method=['POST'])
 def netIncome():
-    cross_income = request.get_json()
-    cross = float(cross_income["gross_income"])
-    return jsonify(cross - PAYE.totalTax(cross))
+    gross_income = request.get_json()
+    print(gross_income)
+    gross = float(gross_income["gross_income"])
+    return jsonify(gross - PAYE.totalTax(gross))
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
