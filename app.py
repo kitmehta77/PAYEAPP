@@ -12,7 +12,7 @@ def hello_world():
 
 
 @app.route('/getNetIncome/', methods=['Post'])
-def getNetIncome():
+def NetIncome():
     gross_income = request.get_json()
     print(gross_income)
     gross = float(gross_income["gross_income"])
