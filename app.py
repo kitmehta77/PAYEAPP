@@ -11,7 +11,7 @@ def hello_world():
     return 'Hello World!'
 
 
-@app.route('/getNetIncome/', method=['POST'])
+@app.route('/getNetIncome/', methods=['POST'])
 def netIncome():
     gross_income = request.get_json()
     print(gross_income)
